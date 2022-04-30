@@ -19,6 +19,8 @@
 
 body {
   font-family: var(--base-font);
+  /* background: url('/assets/eth.svg') no-repeat center/cover; */
+  /* background-size: 50% 50%; */
 }
 
 h1, h2, h3,

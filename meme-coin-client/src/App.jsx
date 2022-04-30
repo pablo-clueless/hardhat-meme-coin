@@ -195,7 +195,7 @@ const App = () => {
       {transfering && <Modal content='Transfering tokens.' />}
       {burning && <Modal content='Burning tokens.' />}
       {minting && <Modal content='Minting tokens.' />}
-      {error && <Modal type='error' content={error} />}
+      {error && <Modal type='error' content={error} clearError={clearError} />}
 
       <Navbar isWalletConnected={isWalletConnected} />
 

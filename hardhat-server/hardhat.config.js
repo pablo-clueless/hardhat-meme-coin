@@ -1,12 +1,13 @@
 require('@nomiclabs/hardhat-waffle')
+require('@nomiclabs/hardhat-ethers')
 require('dotenv').config()
 
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
-      url: `${process.env.ALCHEMY_RINKEBY_URL}`,
-      accounts: [`${process.env.RINKEBY_PRIVATE_KEY}`],
-    } 
+    goerli: {
+      url: `${process.env.ALCHEMY_GOERLI_URL}`,
+      accounts: [`${process.env.GOERLI_PRIVATE_KEY}`],
+    }
   }
 }

@@ -48,6 +48,8 @@ const useStyles = makeStyles({
         borderRadius: 5,
         display: 'grid',
         placeItems: 'center',
+        textAlign: 'center',
+        padding: '0 0.25rem',
     },
     button: {
         padding: '0.5rem 1rem',

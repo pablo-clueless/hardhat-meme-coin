@@ -19,11 +19,34 @@
 
 body {
   font-family: var(--base-font);
-  /* background: url('/assets/eth.svg') no-repeat center/cover; */
-  /* background-size: 50% 50%; */
 }
 
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--bold-font);
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  transform: rotate(90deg);
+}
+
+.spinner__path {
+  stroke-linecap: round;
+  stroke-dasharray: 360;
+  stroke-width: 2;
+  stroke: #de7484;
+  fill: transparent;
+  animation: spin 2s ease-in-out 0s normal forwards infinite;
+}
+
+@keyframes spin {
+  from {
+    stroke-dashoffset: 360;
+  }
+
+  to {
+    stroke-dashoffset: 40;
+  }
 }

@@ -19,6 +19,12 @@ const useStyles = makeStyles({
   }
 })
 
+const initialTransState = {
+  transfering: false,
+  burning: false,
+  minting: false
+}
+
 const App = () => {
   const [isWalletConnected, setIsWalletConnected] = useState(false)
   const [inputValue, setInputValue] = useState(({ walletAddress: '', transferAmount: '', burnAmount: '', mintAmount: '' }))
@@ -31,7 +37,7 @@ const App = () => {
   const [error, setError] = useState(null)
 
   //tranasctions
-  const [transacting, setTransacting] = useState({ transfering: false, burning: false, minting: false })
+  const [transacting, setTransacting] = useState(initialTransState)
 
   const { transfering, burning, minting } = transacting
 
@@ -193,10 +199,10 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {transfering && <Modal content='Transfering tokens.' />}
-      {burning && <Modal content='Burning tokens.' />}
-      {minting && <Modal content='Minting tokens.' />}
-      {error && <Modal type='error' content={error} clearError={clearError} />}
+      {transfering && <Modal content='Transdering tokens to your wallet.' />}
+      {minting && <Modal content="Hold on! We're minting fresh tokens." />}
+      {burning && <Modal content='Like the Phoenix, these burnt tokens shall rise again!' />}
+      {error && <Modal type='error' content={error} onClear={clearError} />}
 
       <Navbar isWalletConnected={isWalletConnected} />
 

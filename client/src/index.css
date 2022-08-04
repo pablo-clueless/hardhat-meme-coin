@@ -19,6 +19,7 @@
 
 body {
   font-family: var(--base-font);
+  overflow-x: hidden;
 }
 
 h1, h2, h3,
@@ -35,7 +36,7 @@ h4, h5, h6 {
 .spinner__path {
   stroke-linecap: round;
   stroke-dasharray: 360;
-  stroke-width: 2;
+  stroke-width: 4;
   stroke: #de7484;
   fill: transparent;
   animation: spin 2s ease-in-out 0s normal forwards infinite;
